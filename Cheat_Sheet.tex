@@ -55,13 +55,26 @@ Starting from a remote repository (GitHub):
 \subsection{Branch, Merge and Rebase}
 
 
-\subsection{Push and Pull}
+\subsection{Push, Pull and Fetch}
 
-In cases where the local repository is already connected to the remote repository (GitHub) through SSH (no need to enter credentials for every push/pull command), one can use the following syntax:
+In cases which the remote repository was created and cloned to the local repository:
 
 \begin{itemize}
-    \item \textit{git push} 
+    \item \textit{git push} to push changes from the local repository to the remote repository
+    \item \textit{git fetch} to download new files added to the remote repository without updating the history of local repository - mostly used to compared files from local and remote repository
+    \item \textit{git pull} to download new files added to the remote repository updating the history of local repository
 \end{itemize}
+
+
+In cases which the local repository was created first and its files must be pushed to the remote repository:
+
+
+\begin{itemize}
+	\item \textit{git push origin master} to push changes from the local repository to the remote repository
+	\item \textit{git fetch origin master} to download new files added to the remote repository without updating the history of local repository - mostly used to compared files from local and remote repository
+	\item \textit{git pull origin master} to download new files added to the remote repository updating the history of local repository
+\end{itemize}
+
 
 \section{GitHub}
 
