@@ -1,17 +1,16 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 
-\title{Git and GitHub cheat sheet}
-\author{renan.alessio }
+\title{Git Cheat-Sheet}
+
 \date{November 2021}
 
 \begin{document}
 
 \maketitle
 
-\section{Git}
 
-\subsection{Creating local repository}
+\section{Creating local repository}
 
 Starting from the local machine:
 
@@ -30,7 +29,7 @@ Starting from a remote repository (GitHub):
     \item This second folder will already be a local repository, so no need to use \textit{git init}
 \end{itemize}
 
-\subsection{General Commands for Control}
+\section{General Commands for Control}
 
 \begin{itemize}
     \item \textit{git status} to check if there are any changes in the files, if the files are being tracked (staged) and if there are changes to be committed. It also provides info on which branch one is working on
@@ -52,7 +51,7 @@ Starting from a remote repository (GitHub):
     
 \end{itemize}
 
-\subsection{Branch, Merge and Rebase}
+\section{Branch, Merge and Rebase}
 
 begin{itemize}
 \item \textit{git branch (branch name)} to create a branch
@@ -61,7 +60,7 @@ begin{itemize}
 \end{itemize}
 
 
-\subsection{Push, Pull and Fetch}
+\section{Push, Pull and Fetch}
 
 In cases which the remote repository was created and cloned to the local repository:
 
@@ -80,9 +79,6 @@ In cases which the local repository was created first and its files must be push
 	\item \textit{git fetch origin master} to download new files added to the remote repository without updating the history of local repository - mostly used to compared files from local and remote repository
 	\item \textit{git pull origin master} to download new files added to the remote repository updating the history of local repository
 \end{itemize}
-
-
-\section{GitHub}
 
 
 \end{document}
