@@ -1,0 +1,69 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Git and GitHub cheat sheet}
+\author{renan.alessio }
+\date{November 2021}
+
+\begin{document}
+
+\maketitle
+
+\section{Git}
+
+\subsection{Creating local repository}
+
+Starting from the local machine:
+
+\begin{itemize}
+    \item Create the folder which is supposed to be the local repository
+    \item In the Command Prompt, access the folder created and type \textit{git init}
+    \item The folder will become your local repository
+\end{itemize}
+
+Starting from a remote repository (GitHub):
+
+\begin{itemize}
+    \item Access the folder supposed to have the local repository (there will be another folder inside the first folder)
+    \item In the Command Prompt, type \textit{git clone (url/ssh of remote repository)}
+    \item The remote repository and its files will be copied into the first folder as a second folder named after the remote repository name
+    \item This second folder will already be a local repository, so no need to use \textit{git init}
+\end{itemize}
+
+\subsection{General Commands for Control}
+
+\begin{itemize}
+    \item \textit{git status} to check if there are any changes in the files, if the files are being tracked (staged) and if there are changes to be committed. It also provides info on which branch one is working on
+    \item \textit{git log} to check all commits made in the branch one is working on. One can verify the commit ID
+    \item \textit{git log --oneline} to check all commits made in the branch one is working on, but with reduced information - looks nicer and more concise. 
+    \item \textit{git diff } shows all the changes made in all files before staging.
+    \item \textit{git diff (file name)} shows all the changes made in the specified file before staging.
+    \item \textit{git add .} stages (git starts tracking) all changes made in all files
+    \item \textit{git add (file name)} stages (git starts tracking) all changes made in the specified file
+    \item \textit{git branch} shows all the branches created and highlights (with *) the branch one is currently on
+    \item \textit{git rm (file name)} deletes the specified file. Nevertheless, all changes in the file need to be staged and committed before deleting it
+    \item \textit{git checkout -- (file name)} deletes the changes made in the file while still in the working directory (before staging) 
+    \item \textit{git checkout (branch name)} to start working on the specified branch
+    \item \textit{git checkout (commit id)} to "go back" to that specified commit. All other commits made after the specified commit are "unseen". HEAD points to the specified commit
+    \item \textit{git checkout (branch name)} to "go back" to the last commit of the specified branch. HEAD points to the last commit of the branch
+    \item \textit{git commit -m "reminder message"} to commit the staged changes in files
+    \item \textit{git commit -a} to stage and commit changes in files all at once (no need to stage first)
+    \item \textit{git checkout -b (branch name)} to create a new branch and change directory to work on the created branch
+    
+\end{itemize}
+
+\subsection{Branch, Merge and Rebase}
+
+
+\subsection{Push and Pull}
+
+In cases where the local repository is already connected to the remote repository (GitHub) through SSH (no need to enter credentials for every push/pull command), one can use the following syntax:
+
+\begin{itemize}
+    \item \textit{git push} 
+\end{itemize}
+
+\section{GitHub}
+
+
+\end{document}
